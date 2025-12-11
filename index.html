@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game_Krechetnikov_Cars - Заставка</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="header-logo">Cars</div>
+            <nav class="header-nav">
+                <a href="index.html" class="header-nav-item">Главная</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="screen screen-start">
+        <div class="container">
+            <h1 class="game-title">Автомобили</h1>
+            <p class="game-subtitle">Game_Krechetnikov_Cars</p>
+            
+            <form class="start-form" id="startForm">
+                <div class="input-group">
+                    <label for="playerName" class="input-label">Введите ваше имя:</label>
+                    <input 
+                        type="text" 
+                        id="playerName" 
+                        class="input-field" 
+                        placeholder="Ваше имя"
+                        required
+                        autocomplete="off"
+                    >
+                    <div class="error-message" id="nameError" style="display: none;"></div>
+                </div>
+                
+                <button type="submit" class="btn btn-start" id="startButton">
+                    Начать игру
+                </button>
+            </form>
+            
+            <div class="start-actions">
+                <button type="button" class="btn btn-secondary" id="viewRatingBtn">
+                    Посмотреть рейтинг
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно рейтинга -->
+    <div class="modal" id="ratingModal" style="display: none;">
+        <div class="modal-content rating-modal-content">
+            <h2>Таблица рейтингов</h2>
+            <div class="results-table-wrapper">
+                <table class="results-table" id="ratingTable">
+                    <thead>
+                        <tr>
+                            <th>Место</th>
+                            <th>Имя игрока</th>
+                            <th>Очки</th>
+                            <th>Время</th>
+                            <th>Уровень</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ratingTableBody">
+                        <!-- Результаты будут добавлены через JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn btn-primary" id="closeRatingBtn">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                © 2025 <strong>Game_Krechetnikov_Cars</strong> | Курсовая работа
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

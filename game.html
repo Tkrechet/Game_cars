@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game_Krechetnikov_Cars - Игра</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="header-logo">Cars</div>
+            <nav class="header-nav">
+                <a href="index.html" class="header-nav-item">Главная</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="screen screen-game">
+        <div class="game-container">
+            <!-- Информационная панель -->
+            <div class="game-header">
+                <div class="game-info">
+                    <div class="info-item">
+                        <span class="info-label">Уровень:</span>
+                        <span class="info-value" id="currentLevel">1</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Раунд:</span>
+                        <span class="info-value" id="currentRound">1</span>
+                        <span class="info-value">/</span>
+                        <span class="info-value" id="totalRounds">3</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Очки:</span>
+                        <span class="info-value" id="currentScore">0</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Время:</span>
+                        <span class="info-value" id="timeRemaining">--:--</span>
+                    </div>
+                </div>
+                
+                <button class="btn btn-secondary" id="endLevelBtn">Завершить уровень</button>
+            </div>
+
+            <!-- Описание уровня -->
+            <div class="level-description" id="levelDescription">
+                <h2 id="levelTitle">Уровень 1</h2>
+                <p id="levelDesc">Описание уровня</p>
+            </div>
+
+            <!-- Игровая область -->
+            <div class="game-area" id="gameArea">
+                <canvas id="gameCanvas" width="800" height="400"></canvas>
+            </div>
+
+            <!-- Панель управления (для всех уровней) -->
+            <div class="game-controls" id="gameControls">
+                <!-- Прогресс-бар до финиша (для уровней 2 и 3) -->
+                <div class="progress-bar-container" id="progressBarContainer" style="display: none;">
+                    <div class="progress-bar-label">
+                        <span>Прогресс до финиша:</span>
+                        <span id="progressBarPercent">0%</span>
+                    </div>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar-fill" id="progressBarFill"></div>
+                    </div>
+                </div>
+                <!-- Управление мышкой для всех уровней -->
+                <div class="controls-level3" id="controlsLevel3" style="display: none;">
+                    <div class="mouse-control-info">
+                        <p class="control-label">Перемещайте мышь по дорожке, чтобы вести машину</p>
+                        <p>Целевое время управления: <span id="targetTimeDisplay">0</span> сек</p>
+                        <p>Текущее время: <span id="currentTimeDisplay">0</span> сек</p>
+                        <button class="btn btn-primary" id="startLevel3Btn">Начать</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Результат раунда -->
+            <div class="round-result" id="roundResult" style="display: none;">
+                <div class="result-content">
+                    <h3 id="resultTitle">Результат</h3>
+                    <p id="resultMessage"></p>
+                    <p id="resultScore">Очки: <span id="resultScoreValue">0</span></p>
+                    <button class="btn btn-primary" id="nextRoundBtn">Следующий раунд</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно завершения уровня -->
+    <div class="modal" id="levelCompleteModal" style="display: none;">
+        <div class="modal-content">
+            <h2 id="levelCompleteTitle">Уровень завершён</h2>
+            <p id="levelCompleteMessage"></p>
+            <div class="modal-buttons">
+                <button class="btn btn-primary" id="nextLevelBtn">Следующий уровень</button>
+                <button class="btn btn-secondary" id="toRatingBtn">Закончить забег и перейти к рейтингу</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/level.js"></script>
+    <script src="js/road.js"></script>
+    <script src="js/car.js"></script>
+    <script src="js/score.js"></script>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                © 2025 <strong>Game_Krechetnikov_Cars</strong> | Курсовая работа
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
+
