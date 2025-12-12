@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game_Krechetnikov_Cars - Рейтинг</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="header-logo">Cars</div>
+            <nav class="header-nav">
+                <a href="index.html" class="header-nav-item">Главная</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="screen screen-results">
+        <div class="container">
+            <h1 class="game-title">Таблица рейтингов</h1>
+            <p class="game-subtitle">Результаты всех игроков</p>
+            
+            <div class="results-container">
+                <div class="results-table-wrapper">
+                    <table class="results-table" id="resultsTable">
+                        <thead>
+                            <tr>
+                                <th>Место</th>
+                                <th>Имя игрока</th>
+                                <th>Очки</th>
+                                <th>Время</th>
+                                <th>Уровень</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsTableBody">
+                            <!-- Результаты будут добавлены через JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="results-actions">
+                    <button class="btn btn-primary" id="playAgainBtn">Играть снова</button>
+                    <button class="btn btn-secondary" id="newGameBtn">Новая игра</button>
+                    <button class="btn btn-secondary" id="clearResultsBtn">Очистить результаты</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                © 2025 <strong>Game_Krechetnikov_Cars</strong> | Курсовая работа
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/results.js"></script>
+</body>
+</html>
+
